@@ -59,6 +59,7 @@ margin-right: auto;
 display: flex;
 justify-content: space-between;
 flex: 1; 
+margin: 20px 0;
 }
 
 .journal-page, .code-page {
