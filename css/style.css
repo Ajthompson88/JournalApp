@@ -1,21 +1,21 @@
 html, body {
-height: 100%;
-margin: 0;
-padding: 0;
-font-family: garamond, serif;
-background-color: #f0f0f0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
 .container {
-height: 100vh; 
-max-width: 100%;
-margin: 0 auto;
-padding: 20px;
-background-color: #81afe3;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-border: solid black 4px;
-display: flex;
-flex-direction: column;
+    height: 100vh; 
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #81afe3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid black 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2 {
@@ -55,7 +55,15 @@ margin-left: auto;
 margin-right: auto;
 }
 
-#journal-container {
+.journal-section {
+    margin: 20px 0; 
+    padding: 20px;
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.journal-container {
 display: flex;
 justify-content: space-between;
 flex: 1; 
@@ -68,7 +76,7 @@ margin: 10px;
 padding: 20px;
 background-color: #f9f9f9;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-border: solid black 2px;
+border: solid black 1px;
 box-sizing: border-box; 
 
 }
