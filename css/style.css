@@ -1,88 +1,210 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
 .container {
-    max-width: 800px;
+    height: 100vh; 
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #81afe3;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid black 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2 {
-    text-align: center;
+text-align: center;
 }
 
-.compose-button, .submit-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
+.compose-button, .entries-button {
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 10px;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
+font-family: garamond, serif;
+height: 60px;
+width: 150px;
 }
 
-.compose-button:hover { /* Added hover effect for buttons */
-    background-color: #e0e0e0;
+.compose-button:hover { 
+background-color: #e0e0e0;
 }
 
-.journal-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.clear-button {
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+margin-top: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.journal-section {
+    margin: 20px 0; 
+    padding: 20px;
+    background-color: #ffffff; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.journal-container {
+display: flex;
+justify-content: space-between;
+flex: 1; 
+margin: 20px 0;
+}
+
+.journal-page, .code-page {
+width: 45%; 
+margin: 10px;
+padding: 20px;
+background-color: #f9f9f9;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border: solid black 1px;
+box-sizing: border-box; 
+
+}
+.journal-page textarea, .code-page textarea {
+width: calc(100% - 40px); 
+max-width: calc(100% - 40px); 
+margin: 20px;
+padding: 10px;
+box-sizing: border-box; 
+resize: none; 
+height: 500px; 
+font-family: garamond, serif;
+font-size:large;
 }
 
 #journalForm {
-    width: 100%;
-    margin-bottom: 20px;
+width: 100%;
+margin-bottom: 20px;
 }
 
-#entryText {
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#entryText1 #entrytext2 {
+width: 100%;
+height: 300px;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #5c5c5c;
+border-radius: 5px;
+background-color: antiquewhite;
 }
 
 #entries {
-    width: 100%;
+width: 100%;
 }
 
 .entry-list {
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f7f7f7; /* Changed background color for better visibility */
+max-height: 300px;
+overflow-y: auto;
+border: 1px solid #ccc;
+padding: 10px;
+border-radius: 5px;
+background-color: #f7f7f7; 
 }
 
 .entry-box {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #f9f9f9;
 }
 
 .entry-timestamp {
-    font-size: 12px;
-    color: #999; /* Changed color for better contrast */
-    font-style: italic; /* Italicized the timestamp */
-    margin-top: 5px;
+font-size: 12px;
+color: #999; 
+font-style: italic; 
+margin-top: 5px;
 }
 
-/* Added media query for responsiveness */
-@media (max-width: 600px) {
-    .compose-button, .submit-button {
-        width: 100%;
-    }
 
-    #entryText {
-        height: 150px;
-    }
+@media (max-width: 600px) {
+.compose-button, .submit-button {
+width: 100%;
+}
+
+#entryText {
+height: 150px;
+}
+}
+
+@media (max-width: 768px) {
+.compose-button, .submit-button {
+width: 100%;
+}
+
+.journal-page, .code-page {
+width: 100%; 
+margin: 10px 0; 
+}
+
+.journal-page textarea, .code-page textarea {
+width: calc(100% - 40px); 
+height: 300px; 
+}
+
+#entryText {
+height: 150px;
+}
+}
+
+@media (min-width: 769px) {
+.journal-page, .code-page {
+width: 45%; 
+margin: 10px;
+}
+
+.journal-page textarea, .code-page textarea {
+width: calc(100% - 40px); 
+height: 500px; 
+}
+}
+
+.modal {
+display: none; 
+position: fixed; 
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+overflow: auto; 
+background-color: rgb(0,0,0); 
+background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-dialog {
+background-color: #fff;
+margin: 15% auto; 
+padding: 20px;
+border: 1px solid #888;
+width: 80%; 
+}
+
+section {
+max-height: max-content;
+}
+
+footer {
+text-align: center;
+bottom: 0;
+margin: 20px;
 }
