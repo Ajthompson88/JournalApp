@@ -1,6 +1,6 @@
 # JournalApp
 
-	In this project we will design, write code, and deploy an application where a person could log their thoughts into. The 		user will be able to log up to 10 times a day with XXX (amount yet to be determined) amount of characters per entry. They 	will also be able to go and select by day, and see in order, their entry past entries and select any of those to re-read, 	edit or even delete if the user wanted. 
+	In this project we will design, write code, and deploy an application where a person could log their thoughts into. The user will be able to log up to 10 times a day with XXX (amount yet to be determined) amount of characters per entry. They 	will also be able to go and select by day, and see in order, their entry past entries and select any of those to re-read, 	edit or even delete if the user wanted. 
 
 ## Description
 

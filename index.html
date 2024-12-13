@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Journal</title>
+<link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <h1>My Coding Journal</h1>
+
+        <section id="journal-container">
+
+            <div class="code-page">
+                <textarea id="entryCode" placeholder="Write your code entry here..."></textarea>
+
+            </div>
+            
+            <div class="journal-page">
+                <textarea id="entryText" placeholder="Write your journal entry here..."></textarea>
+            </div>
+
+        </section>
+        <div>
+            <button id="composeButton" class="compose-button">Code New Entry</button>
+            <button id="openModalButton" class="entries-button">View Past Entries</button> 
+        </div>
+        <section id="entriesModal" class="modal">
+            
+            <div class="modal-dialog modal-dialog-scrollable">
+
+                <div id="entries">
+                    <h2>Journal Entries</h2>
+                    <div id="entryList" class="entry-list"></div>
+                    <button id="clearButton" class="clear-button">Clear All Entries</button>
+                    <button id="closeModalButton" class="clear-button">Close</button> 
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script src="../js/script2.js"></script>
+<footer>&copy The Journal App</footer>
+</html>
