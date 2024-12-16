@@ -1,33 +1,142 @@
-# JournalApp
+# 05 Project 1: Interactive Front-End Application
 
-	In this project we will design, write code, and deploy an application where a person could log their thoughts into. The 		user will be able to log up to 10 times a day with XXX (amount yet to be determined) amount of characters per entry. They 	will also be able to go and select by day, and see in order, their entry past entries and select any of those to re-read, 	edit or even delete if the user wanted. 
+At the conclusion of each phase of this course, you’ll work with a group of your fellow students to create a **project**. A project is collaborative work among a group of developers to create an application that solves a real-world problem. Projects model the experience you’ll encounter in every development role at any company, from large multinational businesses to small startups. Coding is collaborative.
 
-## Description
+A project is a bit different from the Challenge assignments you’ve worked on so far. One of the biggest differences is that you’ll no longer build an application by yourself! This has some advantages&mdash;you won’t have to do all of the work, you can divide up duties, and you can share skills and knowledge with other developers and lean on their strengths. This can also be challenging if you’re used to working alone. Constant communication and time management are just two of the skills you’ll need to practice to make sure everyone in your group works together to complete the project. 
 
+Projects won’t provide you with a user story or acceptance criteria, because you and your group will create them once you decide which real-world problem your application will solve. This lack of constraints can be freeing in a way, because you have room to build what you want, but it also means that you have to decide what those constraints are before you can start working.
 
+Finally, a project requires a presentation, because you’re trying to convince an audience that it serves a purpose. Your instructional staff and fellow students are investors, and you’re pitching your creation to them&mdash;an experience that developers are required to do frequently. Your presentation is just as important as the actual project, so take it just as seriously.
 
-## User Story
+## Project Requirements
 
-	* As a USER I would like to have some where to express my thoughts into an online journal.
-	* As a USER I would like to go back and see my past entries.
-	* As a USER I would to be able to make multiple entries per day if needed. 
+You and your group will use everything you’ve learned over the past four modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 
-## Acceptance Criteria
+* Be deployed to GitHub Pages.
 
-  * It is done when there is input from all the team members on the GitHub repo.
-  * It is done when we have a completed html, css and javascript file in the repo.
-  * It is done when a when MVP is deployed with a vision for the future updates to be added
+* Be interactive (i.e., accept and respond to user input).
 
-## Authors
+* Use a CSS framework (see suggestions).
 
-	Andrew Thompson - @aj.thompson88
+* Include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
 
-	Mohsin Ansare - @mohsinansare
+* Use client-side storage to store persistent data.
 
-	Teresa Perez - @pebbsmom
+* Be responsive.
 
+* Have a polished UI.
 
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
 
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
+### CSS Frameworks
 
+One of the requirements for this project is to incorporate a CSS framework into your application.
 
+> **hint** There are different ways to add these frameworks, but for the purposes of this front-end project, you'll need to use the **CDN option**.
+
+Look into one of the following CSS frameworks and add it to your project:
+
+* [Bootstrap](https://getbootstrap.com/)
+
+* [Tailwind CSS](https://tailwindcss.com/)
+
+* [Materialize](https://materializecss.com/)
+
+* [Pure CSS](https://purecss.io/)
+
+* [Semantic UI](https://semantic-ui.com/)
+
+* [Foundation](https://get.foundation/)
+
+* [Bulma](https://bulma.io/)
+
+> **note** There are a lot of CSS frameworks out there&mdash;this is just a list to get you started. Feel free to use one not included in this list!
+
+## Presentation Requirements
+
+Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+
+* Elevator pitch: a one minute description of your application
+
+* Concept: What is your user story? What was your motivation for development?
+
+* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+
+* Demo: Show your stuff!
+
+* Directions for Future Development
+
+* Links to the deployed application and the GitHub repository
+
+## Grading Requirements
+
+This project is graded based on the following criteria:
+
+### Technical Acceptance Criteria: 25%
+
+* Satisfies the following code requirements:
+
+  * Application uses client-side storage to store persistent data.
+
+  * Application uses a CSS framework.
+
+  * Application must include at least one modal instead of native browser alert, confirm, or prompt functionality. Look into the CSS framework's documentation for more information!
+
+  * Application is interactive (accepts and responds to user input).
+
+### Concept 10%
+
+* Application should be a unique and novel idea.
+
+* Your group should clearly and concisely articulate your project idea.
+
+### Deployment: 20%
+
+* Application deployed at live URL and loads with no errors.
+
+* Application GitHub URL submitted.
+
+### Repository Quality: 10%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains a quality README file with description, screenshot, and link to deployed application.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application is responsive.
+
+### Presentation 10%
+
+* Your group should present using a slide deck.
+
+* Every group member should speak during the presentation.
+
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
+
+### Collaboration 10%
+
+* There are no major disparities in the number of GitHub contributions between group members.
+
+## How to Submit Your Interactive Front-End Project
+
+**Each member of your group** is required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository, with a unique name and a README describing the project.
+
+---
+© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

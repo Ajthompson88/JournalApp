@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     var composeButton = document.getElementById('composeButton');
-    var clearButton = document.getElementById('clearButton'); // Added clear button
-    var entryText = document.getElementById('entryText');
+    var confirmClearButton = document.getElementById('confirmClearButton'); // Added confirm clear button
+    var codeInput = document.getElementById('codeInput');
+    var noteInput = document.getElementById('noteInput');
     var entryList = document.getElementById('entryList');
+    var sunIcon = document.getElementById('sunIcon');
+    var moonIcon = document.getElementById('moonIcon');
 
     composeButton.addEventListener('click', function () {
-        var entry = entryText.value.trim();
-        if (entry) {
+        var code = codeInput.value.trim();
+        var note = noteInput.value.trim();
+        if (code || note) {
             var timestamp = new Date().toLocaleString('en-US', { // Improved timestamp formatting
                 year: 'numeric',
                 month: 'long',
@@ -14,22 +18,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 hour: '2-digit',
                 minute: '2-digit'
             });
-            saveEntry(entry, timestamp);
-            entryText.value = ''; // Clear the textarea after submission
-            addEntryToDOM(entry, timestamp);
+            saveEntry(code, note, timestamp);
+            codeInput.value = ''; // Clear the textarea after submission
+            noteInput.value = ''; // Clear the textarea after submission
+            addEntryToDOM(code, note, timestamp);
         } else {
-            alert("Please write an entry before submitting."); // Alert for empty entry
+            alert("Please write code or notes before submitting."); // Alert for empty entry
         }
     });
 
-    clearButton.addEventListener('click', function () { // Clear all entries functionality
+    confirmClearButton.addEventListener('click', function () { // Clear all entries functionality
         localStorage.removeItem('journalEntries');
         entryList.innerHTML = ''; // Clear the displayed entries
+        $('#clearModal').modal('hide'); // Hide the modal after clearing entries
     });
 
-    function saveEntry(entry, timestamp) {
+    sunIcon.addEventListener('mouseover', function () {
+        document.body.classList.remove('dark-mode');
+        document.body.classList.add('light-mode');
+    });
+
+    moonIcon.addEventListener('mouseover', function () {
+        document.body.classList.remove('light-mode');
+        document.body.classList.add('dark-mode');
+    });
+
+    function saveEntry(code, note, timestamp) {
         var entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
-        entries.push({ entry: entry, timestamp: timestamp });
+        entries.push({ code: code, note: note, timestamp: timestamp });
         localStorage.setItem('journalEntries', JSON.stringify(entries));
     }
 
@@ -37,15 +53,29 @@ document.addEventListener('DOMContentLoaded', function () {
         entryList.innerHTML = ''; // Clear the list before loading entries
         var entries = JSON.parse(localStorage.getItem('journalEntries')) || [];
         entries.forEach(function (entryData) {
-            addEntryToDOM(entryData.entry, entryData.timestamp);
+            addEntryToDOM(entryData.code, entryData.note, entryData.timestamp);
         });
     }
 
-    function addEntryToDOM(entry, timestamp) {
+    function addEntryToDOM(code, note, timestamp) {
         var div = document.createElement('div');
-        div.className = 'entry-box';
-        div.innerHTML = `<p>${entry}</p><div class="entry-timestamp">${timestamp}</div>`;
+        div.className = 'card mb-3';
+        div.innerHTML = `
+            <div class="card-body">
+                <h5 class="card-title">Entry</h5>
+                <pre><code>${escapeHTML(code)}</code></pre>
+                <p class="card-text">${escapeHTML(note)}</p>
+                <p class="card-text"><small class="text-muted">${timestamp}</small></p>
+            </div>`;
         entryList.appendChild(div);
+    }
+
+    function escapeHTML(str) {
+        return str.replace(/&/g, '&amp;')
+                  .replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;')
+                  .replace(/"/g, '&quot;')
+                  .replace(/'/g, '&#039;');
     }
 
     // Load entries when the page loads
