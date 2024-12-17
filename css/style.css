@@ -8,9 +8,16 @@ body {
     background-attachment: fixed; /* Ensures the background image stays fixed during scrolling */
 }
 
+body.light-mode {
+     /* Correct path to light mode background image */
+}
+
+body.dark-mode {
+   * Correct path to dark mode background image */
+}
 /* Light (Sunny) Mode Colors */
 body.light-mode {
-    background-image: url('assets/light_theme2.jpg'); /* Correct path to light mode background image */
+   background-image: url('assets/light_theme2.jpg');/* Correct path to light mode background image */
     background-color: #ffffff;
     color: #000000; /* Dark text color */
 }
