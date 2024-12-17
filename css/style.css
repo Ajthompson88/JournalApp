@@ -45,7 +45,7 @@ body.dark-mode {
 
 body.dark-mode .container {
     background-color: rgba(51, 51, 51, 0.8); /* 25% darker semi-transparent dark background for container */
-    color: #ffffff; /* Light text color */
+    color: black; /* Light text color */
 }
 
 body.dark-mode h1, body-dark-mode h2, body-dark-mode label, body-dark-mode .entry-list h2, body-dark-mode .card-title, body-dark-mode .card-text {
