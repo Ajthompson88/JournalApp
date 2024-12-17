@@ -11,9 +11,8 @@ body {
 /* Light (Sunny) Mode Colors */
 body.light-mode {
     background-image: url('css/assets/light_theme2.jpg'); /* Correct path to light mode background image */
-    color: #212529; /* Dark text color */
     background-color: #ffffff;
-    color: #000000;
+    color: #000000; /* Dark text color */
 }
 
 body.light-mode .container {
@@ -21,7 +20,7 @@ body.light-mode .container {
     color: #212529;
 }
 
-body.light-mode h1, body-light-mode h2, body-light-mode label, body-light-mode .entry-list h2, body-light-mode .card-title, body-light-mode .card-text {
+body.light-mode h1, body.light-mode h2, body-light-mode label, body-light-mode .entry-list h2, body-light-mode .card-title, body-light-mode .card-text {
     color: #212529; /* Dark text color for titles and labels */
 }
 
@@ -33,23 +32,22 @@ body.light-mode .modal-content {
 /* Dark Mode Colors */
 body.dark-mode {
     background-image: url('css/assets/dark_theme2.jpg'); /* Correct path to dark mode background image */
-    color: #191919; /* 25% darker text color */
     background-color: #333333;
-    color: #ffffff;
+    color: #ffffff; /* Light text color */
 }
 
 body.dark-mode .container {
     background-color: rgba(51, 51, 51, 0.8); /* 25% darker semi-transparent dark background for container */
-    color: #191919; /* 25% darker text color */
+    color: #ffffff; /* Light text color */
 }
 
 body.dark-mode h1, body-dark-mode h2, body-dark-mode label, body-dark-mode .entry-list h2, body-dark-mode .card-title, body-dark-mode .card-text {
-    color: #191919; /* 25% darker text color for titles and labels */
+    color: #ffffff; /* Light text color for titles and labels */
 }
 
 body.dark-mode .modal-content {
-    background-color: #7c7c7c; /* 25% darker solid dark background for modal */
-    color: #191919; /* 25% darker text color for modal */
+    background-color: #333333; /* Dark background for modal */
+    color: #ffffff; /* Light text color for modal */
 }
 
 /* Common Styles */
@@ -70,9 +68,6 @@ h1, h2 {
     border-color: lightblue; /* Teal color */
     color: #fff;
 }
-
-
-
 
 .journal-page {
     display: flex;
