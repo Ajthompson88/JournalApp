@@ -10,7 +10,7 @@ body {
 
 /* Light (Sunny) Mode Colors */
 body.light-mode {
-    background-image: url('css/assets/light_theme2.jpg'); /* Correct path to light mode background image */
+    background-image: url('assets/light_theme2.jpg'); /* Correct path to light mode background image */
     background-color: #ffffff;
     color: #000000; /* Dark text color */
 }
@@ -31,7 +31,7 @@ body.light-mode .modal-content {
 
 /* Dark Mode Colors */
 body.dark-mode {
-    background-image: url('css/assets/dark_theme2.jpg'); /* Correct path to dark mode background image */
+    background-image: url('assets/dark_theme2.jpg'); /* Correct path to dark mode background image */
     background-color: #333333;
     color: #ffffff; /* Light text color */
 }
