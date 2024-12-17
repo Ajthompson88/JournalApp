@@ -71,10 +71,8 @@ h1, h2 {
     color: #fff;
 }
 
-.compose-button:hover, .submit-button:hover, .btn-primary:hover, .btn-danger:hover {
-    background-color: navy; /* 25% darker teal for hover effect */
-    border-color: navy; /* 25% darker teal for hover effect */
-}
+
+
 
 .journal-page {
     display: flex;
